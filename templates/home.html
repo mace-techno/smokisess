@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- ============================================== HEADER : END ============================================== -->
+<div class="body-content outer-top-xs">
+  <div class="container">
+    <div class="row"> 
+      <!-- ============================================== SIDEBAR ============================================== -->
+ 
+    
+  
+<div class="col-xs-12 col-sm-12 col-md-9 rht-col"> 
+
+  <div class="clearfix filters-container m-t-10">
+    <div class="row">
+  <div class="search-result-container ">
+    <div id="myTabContent" class="tab-content category-list">
+      <div class="tab-pane active " id="grid-container">
+
+        
+        <div class="category-product">
+          <div class="row">
+            {% for item in object_list %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+            
+            <div class="item">
+              <div class="products">
+                <div class="product">
+                  <div class="product-image">
+                    <div class="image"> 
+                    <a href="{{ item.get_absolute_url }}">
+                       <img src="{{ item.image.url }}" alt="" height="200" width="100"> 
+                        <img src="{{ item.image.url }}" alt="" class="hover-image" height="200" width="100">
+                    </a> 
+                 </div>
+                    <div class="tag hot"><span>hot</span></div>
+                  </div>
+                  
+                  <div class="product-info text-left">
+                    <h3 class="name"><a href="{{ item.get_category_display }}">{{ item.title }}</a></h3>
+                    <div class="rating rateit-small"></div>
+                    <div class="description"> {{ item.description }}</div>
+                    <div class="product-price"> <span class="price"> ${{ item.price }}</span>{% if item.discount_price %} <span class="price-before-discount">$ {{ item.discount_price }}</span> {% else %}  {% endif %} </div>
+                    <!-- /.product-price --> 
+                    
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            <!-- /.item -->
+          
+            {% endfor %} 
+          
+          
+        </div>
+        <!-- /.category-product --> 
+      </div>
+      <!-- /.tab-pane #list-container --> 
+    </div>
+    <!-- /.tab-content -->
+    <div class="clearfix filters-container bottom-row">
+      <div class="text-right">
+        {% if is_paginated %}
+        <div class="pagination-container">
+          <ul class="list-inline list-unstyled">
+
+            {% if page_obj.has_previous %}
+            <li class="prev"><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+            {% endif %}
+
+            <li><a href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
+            
+            {% if page_obj.has_next %}
+            <li class="next"><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+            {% endif %}
+          </ul>
+          <!-- /.list-inline --> 
+        </div>
+        {% endif %}
+        <!-- /.pagination-container --> </div>
+      <!-- /.text-right --> 
+      
+    </div>
+    <!-- /.filters-container --> 
+    
+  </div>
+  <!-- /.search-result-container --> 
+  
+</div>
+<!-- /.col --> 
+  </div>
+
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-3 sidebar"> 
+        
+  <!-- ================================== TOP NAVIGATION ================================== -->
+  <div class="side-menu animate-dropdown outer-bottom-xs">
+    <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Drugs</div>
+    <nav class="yamm megamenu-horizontal">
+      <ul class="nav">
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Ketamine</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Meth</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>MDMA</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Adderall</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Broom-dragonfly</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Oxys</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Dilaudid</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Mescaline</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Mushroom</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Bath salts</a>
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Cortisone</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Toradol</a>
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Aspirin crack</a> 
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Flint stone gummies</a>
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Nicotine</a> 
+       
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Home and Garden</a> 
+          <!-- /.dropdown-menu --> </li>
+        <!-- /.menu-item -->
+        
+      </ul>
+      <!-- /.nav --> 
+    </nav>
+    <!-- /.megamenu-horizontal --> 
+  </div>
+  <!-- /.side-menu --> 
+  <!-- ================================== TOP NAVIGATION : END ================================== --> 
+  </div>
+    </div>
+  </div>
+{% endblock content %}
+
+

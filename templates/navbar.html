@@ -1,0 +1,133 @@
+{% load static %}
+{% load cart_template_tag %}
+  <body class="cnt-home">
+    <!-- ============================================== HEADER ============================================== -->
+    <header class="header-style-1"> 
+      
+      <!-- ============================================== TOP MENU ============================================== -->
+      
+      <!-- /.header-top --> 
+      <!-- ============================================== TOP MENU : END ============================================== -->
+      <div class="main-header">
+        <div class="container">
+          < class="row">
+            <div class="col-xs-13 col-sm-12 col-md-3 logo-holder"> 
+              <!-- ============================================================= LOGO ============================================================= -->
+              <div class="logo"> <a href="{% url 'core:home' %}"> <img src="{% static 'images/logo.png' %}" alt="logo" height="90" width="120"> </a> </div>
+              <!-- /.logo --> 
+              <!-- ============================================================= LOGO : END ============================================================= --> </div>
+            <!-- /.logo-holder -->
+            
+              <!-- /.contact-row --> 
+              <!-- ============================================================= SEARCH AREA ============================================================= -->
+              
+              <!-- /.search-area --> 
+              <!-- ============================================================= SEARCH AREA : END ============================================================= --> 
+            <!-- /.top-search-holder -->
+            
+            <div class=" animate-dropdown top-cart-row"> 
+              <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+              
+              <div class="dropdown dropdown-cart"> <a href="{% url 'core:order-summary' %}" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
+                <div class="items-cart-inner">
+                  <div class="basket">
+                  <div class="basket-item-count"><span class="count">{{ request.user|cart_item_count }}</span></div>
+                  <div class="total-price-basket"> <span class="lbl" >Shopping Cart</span><span class="value"></span> </div>
+                  </div>
+                </div>
+                </a>
+                
+              </div>
+              <!-- /.dropdown-cart --> 
+            </div>
+          </div>
+              <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= --> </div>
+            <!-- /.top-cart-row --> 
+          </div>
+          <!-- /.row --> 
+          
+        </div>
+        <!-- /.container --> 
+        
+      </div>
+      <!-- /.main-header --> 
+        <!-- /.main-header --> 
+        <!-- ============================================== NAVBAR ============================================== -->
+  <div class="header-nav animate-dropdown" style=" background-color: #1d3020; ">
+    <div class="container"> 
+      <div class="yamm navbar navbar-default" role="navigation" >
+        <div class="navbar-header">
+       <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> 
+       <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="nav-bg-class" >
+          <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
+            <div class="nav-outer">
+              <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="{% url 'core:home' %}"><span>Home</span></a></li>
+                {% if request.user.is_authenticated %}
+                <li class="dropdown"><a href="{% url 'core:account' %}"><span>My Dashboard</span></a></li>
+                <li class="dropdown "><a href="{% url 'core:order-summary' %}"><span>My Cart</span></a></li>
+                <li class="chdropdowneck"><a href="{% url 'account_logout' %}"><span>Logout</span></a></li>
+                {% else %}
+                <li class="dropdown"><a href="{% url 'account_login' %}"><span>Login</span></a></li>
+                <li class="dropdown"><a href="{% url 'account_signup' %}"><span>Create Account</span></a></li>
+                {% endif %}
+
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Drugs</a>
+                  <ul class="dropdown-menu pages">
+                    <li>
+                      <div class="yamm-content">
+                        <div class="row">
+                          <div class="col-xs-12 col-menu">
+                            <ul class="links">
+                              <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Ketamine</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Meth</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>MDMA</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Adderall</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Broom-dragonfly</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Oxys</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Dilaudid</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Mescaline</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Mushroom</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Bath salts</a>
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Cortisone</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Toradol</a>
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Aspirin crack</a> 
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Flint stone gummies</a>
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Nicotine</a> 
+                               
+                                <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-envira"></i>Home and Garden</a> 
+                                  <!-- /.dropdown-menu --> </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown  navbar-right special-menu"> <a href="#">Get 30% off on selected items</a> </li>
+              </ul>
+              <!-- /.navbar-nav -->
+              <div class="clearfix"></div>
+            </div>
+            <!-- /.nav-outer --> 
+          </div>
+          <!-- /.navbar-collapse --> 
+          
+        </div>
+        <!-- /.nav-bg-class --> 
+      </div>
+      <!-- /.navbar-default --> 
+    </div>
+    <!-- /.container-class --> 
+    
+  </div>
+  <!-- /.header-nav --> 
+  <!-- ============================================== NAVBAR : END ============================================== -->   
+ 
+  <!-- /.header-nav --> 
+  <!-- ============================================== NAVBAR : END ============================================== --> 
+</header>
+

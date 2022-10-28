@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+{% load random_number %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+
+<div class="breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-inner">
+			<ul class="list-inline list-unstyled">
+				<li><a href="{% url 'core:home' %}">Home</a></li>
+				<li class='active'>Checkout</li>
+			</ul>
+		</div><!-- /.breadcrumb-inner -->
+	</div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+						<!-- checkout-step-01  -->
+                        <div class="body-content">
+                            <div class="container">
+                                <div class="track-order-page">
+
+<br>
+<br>
+<br>
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                class="rounded-circle img-fluid" style="width: 150px;">
+
+              <h4 class="my-3">{{ request.user.email|split:"@"|first  }}-{% random_int 136901 994000 %}</h4>
+              <p class="text-muted mb-4">{{ request.user.email }}</p>
+              <p class="text-muted mb-4">{% for x in object %} {{ x.country }} {% endfor %}</p>
+              <div class="d-flex justify-content-center mb-3">
+                <button type="button" class="btn btn-warning ">Edit Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">User Name</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ request.user.email|split:"@"|first  }}-{% random_int 136901 994000 %}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Email</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ request.user.email }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Phone</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0"> {% for x in object %} {{ x.phone }},  {% endfor %}</p>
+                </div>
+              </div>
+              <hr>
+              
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Address</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{% for x in object %} {{ x.address }}, {% endfor %}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Subscribed zone</p>
+                </div>
+                <div class="col-sm-9">
+                
+                  <p class="text-muted mb-0">  {% for item in object %} {{item.country }},  {% endfor %}</p>
+                 
+                </div>
+              </div>
+             
+              <hr>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="body-content outer-top-xs">
+	<div class="container">
+    <div class="product-comparison">
+		<div>
+			<h1 class="page-title text-center heading-title">Subscription Plans</h1>
+			<div class="table-responsive">
+				<table class="table compare-table inner-top-vs">
+					<tr>
+						<th>Products</th>
+						<td>
+							<div class="product">
+								<div class="product-image">
+									<div class="image">
+										<a href="detail.html">
+										    <img alt="" src="assets/images/products/p1.jpg">
+										</a>
+									</div>
+
+									<div class="product-info text-left">
+										<h3 class="name"><a href="detail.html">Duration</a></h3>
+
+									</div>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="product">
+								<div class="product-image">
+									<div class="image">
+										<a href="detail.html">
+										    <img alt="" src="assets/images/products/p2.jpg">
+										</a>
+									</div>
+
+									<div class="product-info text-left">
+										<h3 class="name"><a href="detail.html">Price</a></h3>
+
+									</div>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="product">
+								<div class="product-image">
+									<div class="image">
+										<a href="detail.html">
+										    <img alt="" src="assets/images/products/p4.jpg">
+										</a>
+									</div>
+
+									<div class="product-info text-left">
+										<h3 class="name"><a href="detail.html">Location</a></h3>
+
+									</div>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="product">
+								<div class="product-image">
+									<div class="image">
+										<a href="detail.html">
+										    <img alt="" src="assets/images/products/p5.jpg">
+										</a>
+									</div>
+
+									<div class="product-info text-left">
+										<h3 class="name"><a href="detail.html">Payment Point</a></h3>
+
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<th>#</th>
+						<td>
+							<div class="product-price">
+								<span class="price"> One week </span>
+							</div>
+						</td>
+
+						<td>
+							<div class="product-price">
+								<span class="price"> $10.70 </span>
+							</div>
+						</td>
+
+						<td>
+							<div class="product-price">
+								<span class="price"> $7.00 </span>
+							</div>
+						</td>
+
+						<td>
+							<div class="product-price">
+								<span class="price"> (BTC WALLET)</span>
+								<span class="text">bc1q67m8suddf2dxq3gp06hd04wqhke2geccj0mt5h</span>
+							</div>
+						</td>
+					</tr>
+
+					<tr>
+						<td><p class="in-stock">#</p></td>
+	                     <td><p class="in-stock">Two Weeks</p></td>
+	                     <td><p class="in-stock">$18.425</p></td>
+	                     <td><p class="in-stock">$7.00</p></td>
+                       <td>
+                        <div class="product-price">
+                          <span class="price">(LITECOIN WALLET) </span>
+                          <span class="text">ltc1qmwtw7wuxzns5q6eduqjjsh5skpe5hwav34fmyr</span>
+                        </div>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td><p class="in-stock">#</p></td>
+                                   <td><p class="in-stock">One Month</p></td>
+                                   <td><p class="in-stock">$95.30</p></td>
+                                   <td><p class="in-stock">$7.00</p></td>
+                                   <td>
+                                    <div class="product-price">
+                                      <span class="price">(ETHEREUM WALLET)</span>
+                                      <span class="text">0xf399D9472aa48D0307fD3d156de05936e52790a1</span>
+                                    </div>
+                                  </td>
+                                  </tr>
+                                  <tr>
+                                    <td><p class="in-stock">#</p></td>
+                                               <td><p class="in-stock">Three Months</p></td>
+                                               <td><p class="in-stock">$170.00</p></td>
+                                               <td><p class="in-stock">$7.00</p></td>
+                                               <td>
+                                                <div class="product-price">
+                                                  <span class="price">(BNB WALLET)</span>
+                                                  <span class="text">nb1y8keuxewjzs94h5lfldkd7pz7wpfjpc5y5kp29</span>
+                                                </div>
+                                              </td>
+                                              </tr>
+                                              <tr>
+                                                <td><p class="in-stock">#</p></td>
+                                                           <td><p class="in-stock">Six Months</p></td>
+                                                           <td><p class="in-stock">$182.00</p></td>
+                                                           <td><p class="in-stock">$7.00</p></td>
+                                                           <td>
+                                                            <div class="product-price">
+                                                              <span class="price">(BNB WALLET)</span>
+                                                              <span class="text">nb1y8keuxewjzs94h5lfldkd7pz7wpfjpc5y5kp29</span>
+                                                            </div>
+                                                          </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><p class="in-stock">#</p></td>
+                                                                       <td><p class="in-stock">One Year</p></td>
+                                                                       <td><p class="in-stock">$279.00</p></td>
+                                                                       <td><p class="in-stock">$7.00</p></td>
+                                                                       <td>
+                                                                        <div class="product-price">
+                                                                          <span class="price">(USDT TRC20 WALLET)</span>
+                                                                          <span class="text">TNCVZLx9UNAixg2Zef3Y7NF2cbatJXjH2j</span>
+                                                                        </div>
+                                                                      </td>
+                                                                      </tr>
+
+					<tr >
+						<th>#</th>
+						<td class='text-center'><a href="#" class="remove-icon"><i class="fa fa-times"></i></a></td>
+						<td class='text-center'><a href="#" class="remove-icon"><i class="fa fa-times"></i></a></td>
+						<td class='text-center'><a href="#" class="remove-icon"><i class="fa fa-times"></i></a></td>
+						<td class='text-center'><a href="#" class="remove-icon"><i class="fa fa-times"></i></a></td>
+					</tr>
+				</table>
+			</div>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="body-content">
+	<div class="container">
+		<div class="track-order-page">
+			<div class="row">
+				<div class="col-md-12">
+	<h2 class="heading-title">Subscribe to list</h2>
+	<span class="title-tag inner-top-ss">Please enter your Order ID in the box below and press Enter. This was given to you on your receipt and in the confirmation email you should have received. </span>
+	<form class="register-form outer-top-xs" role="form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-12">
+                <script type= "text/javascript" src = "{% static 'js/countries.js'%}"></script>
+
+		<div class="form-group">
+		    <label class="info-title" for="exampleOrderId1">Select Country</label>
+            <select id="country" name ="country" class="form-control unicase-form-control select"></select> 
+                </div>
+
+            <hr/>
+            <script language="javascript">
+                populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+                populateCountries("country2");
+                populateCountries("country2");
+            </script>
+            </div>
+          </div>
+		<div class="form-group">
+		    <label class="info-title" for="exampleOrderId1">Phone Number</label>
+		    <input type="text" name="phone" class="form-control unicase-form-control text-input" id="exampleOrderId1" >
+		</div>
+	  	<div class="form-group">
+		    <label class="info-title" >Address</label>
+		    <input type="text" name="address" class="form-control unicase-form-control text-input" id="exampleBillingEmail1" >
+		</div>
+    <div class="form-group">
+      <label class="info-title" for="exampleOrderId1">Transaction ID</label>
+      <input type="text" name="tranxid" class="form-control unicase-form-control text-input" id="tranxid" >
+  </div>
+        <div class="form-group">
+		    <label class="info-title" for="exampleBillingEmail1">Upload Image</label>
+            <input type="file" id="myFile" name="filename">
+		</div>
+	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Track</button>
+	</form>	
+</div>	
+</div>
+</div>
+    </div>		</div><!-- /.row -->
+		</div><!-- /.sigin-in-->
+  
+
+{% endblock content %}
