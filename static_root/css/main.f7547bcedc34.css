@@ -68,7 +68,7 @@ a:focus {
   text-decoration: none;
 }
 img[src="assets/images/blank.gif"] {
-  background: url("../images/ajax.gif") no-repeat scroll center center #ffffff;
+  background: url("../images/ajax.14a0936bd54f.gif") no-repeat scroll center center #ffffff;
 }
 
 .btn-upper {
@@ -1347,7 +1347,7 @@ header{
     text-align: center;
     font-weight: normal;
     margin-right: 11px;
-    background: url(../images/icon-cart.png) no-repeat top left;
+    background: url("../images/icon-cart.bdf49792be15.png") no-repeat top left;
     padding: 15px 0px;
     border-radius: 5px;
     width: 50px;
@@ -3093,7 +3093,7 @@ font-family: FontAwesome;
   font-family: 'Open Sans', sans-serif;
 }
 .cnt-strip .new-label {
-  background: url("../images/label.png") no-repeat scroll right top;
+  background: url("../images/label.a859b15f0494.png") no-repeat scroll right top;
   height: 72px;
   position: absolute;
   left: -1px;

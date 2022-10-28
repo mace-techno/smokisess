@@ -1097,7 +1097,7 @@ a {
 .top-bar {
   padding:0px;
   font-size: 14px;
-  background: #1d3020;
+  background: #0C8241;
 }
 .top-bar .cnt-account {
   float: right;
@@ -1196,12 +1196,12 @@ a {
 /* Header
 /*===================================================================================*/
 header{
-    background: #1d3020;
+    background: #0C8241;
 }
 
 .main-header {
   padding:2px 0px 2px 0px;
-  background: #1d3020;
+  background: #0C8241;
 }
 .main-header .logo-holder {
   margin-top:2px;
@@ -1489,13 +1489,13 @@ header{
   top: 90%;
 }
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav > li .menu-label.new-menu {
-  background: #1d3020;
+  background: #0C8241;
 }
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav > li .menu-label.new-menu:after {
-  border-color: #1d3020 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: #0C8241 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav > li .menu-label.new-menu:before {
-  border-color: #1d3020 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: #0C8241 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav > li .menu-label.hot-menu {
   background: #ff7878;
@@ -2850,7 +2850,7 @@ font-family: FontAwesome;
 }
 .product .cart .action ul li.lnk {
   margin: 10px 0px;
-      background: #1d3020;
+      background: #0C8241;
     margin: 0px;
     padding: 12px 4px;
 	border-radius:999px;
@@ -2863,7 +2863,7 @@ font-family: FontAwesome;
   padding: 8px 10px;
 }
 .product .cart .action ul li.lnk.wishlist {
-	background:#1d3020;
+	background:#0C8241;
 	margin:0px 3px;
 	border-radius:999px
 	
@@ -2892,7 +2892,7 @@ font-family: FontAwesome;
   z-index: 100;
 }
 .tag.new {
-  background: #1d3020;
+  background: #0C8241;
 }
 .tag.hot {
   background: #ff7878;
@@ -3251,7 +3251,7 @@ font-family: FontAwesome;
 	display: inline-block!important;
 	text-align: center;
 	padding: 0;
-	background: #1d3020 !important;
+	background: #0C8241 !important;
 }
 .social .tw a:before {
 	content: "\f099";
@@ -3262,7 +3262,7 @@ font-family: FontAwesome;
 	display: inline-block!important;
 	text-align: center;
 	padding: 0;
-	background: #1d3020 !important;
+	background: #0C8241 !important;
 }
 .social .googleplus a:before {
 	content: "\f0d5";
@@ -3312,7 +3312,7 @@ font-family: FontAwesome;
 	display: inline-block!important;
 	text-align: center;
 	padding: 0;
-	background: #1d3020 !important;
+	background: #0C8241 !important;
 }
 .social .youtube a:before {
 	content: "\f167";
@@ -4723,7 +4723,7 @@ font-family: FontAwesome;
     font-weight: 600;
 }
 .body-content .sign-in-page .sign-in .social-sign-in .facebook-sign-in {
-  background-color: #1d3020;
+  background-color: #0C8241;
   margin-right: 10px;
 }
 .blog-page .blog-post {
