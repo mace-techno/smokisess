@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-tlf8(@5zp0cu+o3-z!9po%f=w%5p$%dh09i2owhjvn7saoh@g7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','smokebando.herokuapp.com','wwww.smokebando.herokuapp.com', 'smokinesis.com', 'wwww.smokinesis.com']
+ALLOWED_HOSTS = ['127.0.0.1','smokebando.herokuapp.com','wwww.smokisess.herokuapp.com', 'smokisess.com', 'wwww.smokisess.com']
 
 
 # Application definition
