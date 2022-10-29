@@ -36,7 +36,6 @@
               <p class="text-muted mb-4">{{ request.user.email }}</p>
               <p class="text-muted mb-4">{% for x in object %} {{ x.country }} {% endfor %}</p>
               <div class="d-flex justify-content-center mb-3">
-                <button type="button" class="btn btn-warning ">Edit Profile</button>
               </div>
             </div>
           </div>
@@ -210,7 +209,7 @@
 
 						<td>
 							<div class="product-price">
-								<span class="price"> (BTC WALLET)</span>
+								<span class="price"><img src="{% static 'images/btc.png' %}" alt="logo" ></span>
 								<span class="text">bc1q67m8suddf2dxq3gp06hd04wqhke2geccj0mt5h</span>
 							</div>
 						</td>
@@ -223,7 +222,7 @@
 	                     <td><p class="in-stock">$7.00</p></td>
                        <td>
                         <div class="product-price">
-                          <span class="price">(LITECOIN WALLET) </span>
+                          <span class="price"><img src="{% static 'images/ltc.png' %}" alt="logo" ></span>
                           <span class="text">ltc1qmwtw7wuxzns5q6eduqjjsh5skpe5hwav34fmyr</span>
                         </div>
                       </td>
@@ -235,7 +234,7 @@
                                    <td><p class="in-stock">$7.00</p></td>
                                    <td>
                                     <div class="product-price">
-                                      <span class="price">(ETHEREUM WALLET)</span>
+                                      <span class="price"><img src="{% static 'images/eth.png' %}" alt="logo" ></span>
                                       <span class="text">0xf399D9472aa48D0307fD3d156de05936e52790a1</span>
                                     </div>
                                   </td>
@@ -247,7 +246,7 @@
                                                <td><p class="in-stock">$7.00</p></td>
                                                <td>
                                                 <div class="product-price">
-                                                  <span class="price">(BNB WALLET)</span>
+                                                  <span class="price"><img src="{% static 'images/bnb.png' %}" alt="logo" ></span>
                                                   <span class="text">nb1y8keuxewjzs94h5lfldkd7pz7wpfjpc5y5kp29</span>
                                                 </div>
                                               </td>
@@ -259,7 +258,7 @@
                                                            <td><p class="in-stock">$7.00</p></td>
                                                            <td>
                                                             <div class="product-price">
-                                                              <span class="price">(BNB WALLET)</span>
+                                                              <span class="price"><img src="{% static 'images/bnb.png' %}" alt="logo"></span>
                                                               <span class="text">nb1y8keuxewjzs94h5lfldkd7pz7wpfjpc5y5kp29</span>
                                                             </div>
                                                           </td>
@@ -271,7 +270,7 @@
                                                                        <td><p class="in-stock">$7.00</p></td>
                                                                        <td>
                                                                         <div class="product-price">
-                                                                          <span class="price">(USDT TRC20 WALLET)</span>
+                                                                          <span class="price"><img src="{% static 'images/usdt.png' %}" alt="logo" ></span>
                                                                           <span class="text">TNCVZLx9UNAixg2Zef3Y7NF2cbatJXjH2j</span>
                                                                         </div>
                                                                       </td>
